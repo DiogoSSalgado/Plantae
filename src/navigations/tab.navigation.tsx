@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { SairScreen, CultivosScreen, MapScreen, PerfilScreen } from "../screens";
+import { SairScreen, CultivosScreen, MapScreen, PerfilScreen, QrCodeScreen } from "../screens";
 import colors from "../styles/colors";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
@@ -42,6 +42,15 @@ export default function TabNavigation() {
         options={{
           tabBarIcon: () => (
             <MaterialCommunityIcons name="tree" size={24} color={colors.white} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="QrCode"
+        component={QrCodeScreen}
+        options={{
+          tabBarIcon: () => (
+            <MaterialCommunityIcons name="qrcode-scan" size={24} color={colors.white} />
           ),
         }}
       />
