@@ -54,6 +54,17 @@ export default function TabNavigation() {
           ),
         }}
       />
+
+      <Tab.Screen
+        name="Camera"
+        component={CameraScreen}
+        options={{
+          tabBarIcon: () => (
+            <MaterialCommunityIcons name="camera" size={24} color={colors.white} />
+          ),
+        }}
+      />
+
       <Tab.Screen
         name="Sair"
         component={SairScreen}
