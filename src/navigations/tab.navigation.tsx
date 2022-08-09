@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { SairScreen, CultivosScreen, MapScreen, PerfilScreen, QrCodeScreen } from "../screens";
+import { SairScreen, CultivosScreen, MapScreen, PerfilScreen, QrCodeScreen, CameraScreen} from "../screens";
 import colors from "../styles/colors";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
