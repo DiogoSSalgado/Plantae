@@ -6,7 +6,7 @@ import {
     ImageBackground,
     Alert
 } from "react-native"
-import {Camera} from "expo-camera";
+import { Camera } from "expo-camera";
 import * as MediaLibrary from "expo-media-library";
 import styles from "./styles"
 

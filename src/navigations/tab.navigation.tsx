@@ -66,6 +66,16 @@ export default function TabNavigation() {
       />
 
       <Tab.Screen
+        name="Arquivos"
+        component={ArquivoScreen}
+        options={{
+          tabBarIcon: () => (
+            <MaterialCommunityIcons name="file-account" size={24} color={colors.white} />
+          ),
+        }}
+      />
+
+      <Tab.Screen
         name="Sair"
         component={SairScreen}
         options={{
