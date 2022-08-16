@@ -14,7 +14,7 @@ export default function Perfil() {
       <Text style={styles.title}>Nome: {user?.name}</Text>
       <Text style={styles.title}>Email: {user?.email}</Text>
       
-      <Text style={styles.title}>Dados: </Text>
+      <Text style={styles.titlebold}>DADOS: </Text>
       <CardSocial>
         <>
           <Text style={styles.title}>• PH:</Text>
@@ -46,6 +46,11 @@ export default function Perfil() {
         </>
       </CardSocial>
       
+      <Text style={styles.titlebold}>Tamanho do Lote: </Text>
+      <Text style={styles.title}>• ACRE/HECTARES </Text>
+      <Text style={styles.title}>Latitude: </Text>
+      <Text style={styles.title}>Longitude: </Text>
+
       <Button
         title="Editar"
         type="primary"

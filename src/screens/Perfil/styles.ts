@@ -4,21 +4,26 @@ import colors from "../../styles/colors"
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
     resizeMode: "cover",
     backgroundColor: "#F7FFEF",
   },
+  titlebold: {
+    fontWeight: "bold",
+    fontSize: 20,
+    justifyContent: "flex-start",
+    color: colors.black,
+    marginLeft: 10,
+  },
   title: {
     fontSize: 20,
-    textAlign: "left",
+    justifyContent: "flex-start",
     color: colors.black,
     marginLeft: 10,
   },
   icon: {
     color: colors.black,
-    textAlign: "right",
     fontSize: 15,
-    padding: 5
+    padding: 5,
   },
   link: {
     fontSize: 20

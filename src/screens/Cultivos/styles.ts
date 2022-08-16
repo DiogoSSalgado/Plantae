@@ -5,14 +5,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    backgroundColor: colors.white
+    backgroundColor: "#B2DCF2"
 
   },
   title: {
     fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
-    color: colors.black,
+    backgroundColor: colors.white,
+    color: colors.black
   },
   formRow: {
     margin: 10,
@@ -22,7 +23,6 @@ const styles = StyleSheet.create({
     borderColor: colors.secondary,
     borderRadius: 20,
   },
-
   input: {
     fontSize: 18,
     padding: 5,
@@ -41,8 +41,7 @@ const styles = StyleSheet.create({
     height: 250
   },
   viewimage:{
-
-    
+    backgroundColor: colors.white,
   }
 })
 

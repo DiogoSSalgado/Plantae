@@ -6,7 +6,7 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import styles from "./styles";
-import { LoginTypes } from "../../types/Screen.types";
+import Button from "../../components/AltButton";
 
 export default function Cultivo() {
   return (
@@ -17,6 +17,21 @@ export default function Cultivo() {
             <Image source={require("../../assets/image8.png")} style={styles.imagem}/>
           </View>
         </KeyboardAvoidingView>
+        <Button
+          title="1º Soja"
+          type="primary"
+          onPress={() => console.log("Soja")}
+        />
+        <Button
+          title="2º Café"
+          type="primary"
+          onPress={() => console.log("Café")}
+        />
+        <Button
+          title="3º Milho"
+          type="primary"
+          onPress={() => console.log("Milho")}
+        />
     </View>
   );
 }
