@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { SairScreen, CultivosScreen, MapScreen, PerfilScreen, QrCodeScreen, CameraScreen} from "../screens";
+import { SairScreen, CultivosScreen, MapScreen, PerfilScreen, QrCodeScreen, CameraScreen, ArquivoScreen, CalculadoraScreen} from "../screens";
 import colors from "../styles/colors";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
@@ -68,6 +68,16 @@ export default function TabNavigation() {
       <Tab.Screen
         name="Arquivos"
         component={ArquivoScreen}
+        options={{
+          tabBarIcon: () => (
+            <MaterialCommunityIcons name="file-account" size={24} color={colors.white} />
+          ),
+        }}
+      />
+
+    <Tab.Screen
+        name="Calc"
+        component={CalculadoraScreen}
         options={{
           tabBarIcon: () => (
             <MaterialCommunityIcons name="file-account" size={24} color={colors.white} />

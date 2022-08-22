@@ -4,9 +4,10 @@ import colors from "../../styles/colors";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
-    backgroundColor: "#B2DCF2"
-
+    backgroundColor: "#B2DCF2",
+    flexWrap: 'wrap',
+    flexDirection: "row",
+    marginBottom: "-100%",
   },
   title: {
     fontSize: 30,
@@ -14,14 +15,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     backgroundColor: colors.white,
     color: colors.black
-  },
-  formRow: {
-    margin: 10,
-    flexDirection: "row",
-    alignItems: "center",
-    borderWidth: 1.5,
-    borderColor: colors.secondary,
-    borderRadius: 20,
   },
   input: {
     fontSize: 18,
@@ -35,7 +28,6 @@ const styles = StyleSheet.create({
     padding: 10
   },
   imagem:{
-    marginTop: 40,
     alignItems: 'center',
     width: "100%",
     height: 250

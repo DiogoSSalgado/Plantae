@@ -10,20 +10,16 @@ const styles = StyleSheet.create({
   titlebold: {
     fontWeight: "bold",
     fontSize: 20,
-    justifyContent: "flex-start",
+    paddingTop: 20,
+    paddingBottom: 5,
     color: colors.black,
     marginLeft: 10,
   },
   title: {
     fontSize: 20,
-    justifyContent: "flex-start",
+    justifyContent: "center",
     color: colors.black,
     marginLeft: 10,
-  },
-  icon: {
-    color: colors.black,
-    fontSize: 15,
-    padding: 5,
   },
   link: {
     fontSize: 20

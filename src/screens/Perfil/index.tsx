@@ -18,36 +18,31 @@ export default function Perfil() {
       <CardSocial>
         <>
           <Text style={styles.title}>• PH:</Text>
-          <AntDesign name="caretdown" style={styles.icon} />
         </>
       </CardSocial>
       <CardSocial>
         <>
           <Text style={styles.title}>• SALINIDADE:</Text>
-          <AntDesign name="caretdown" style={styles.icon} />
         </>
       </CardSocial>
       <CardSocial>
         <>
           <Text style={styles.title}>• CTC:</Text>
-          <AntDesign name="caretdown" style={styles.icon} />
         </>
       </CardSocial>
       <CardSocial>
         <>
           <Text style={styles.title}>• MERCÚRIO:</Text>
-          <AntDesign name="caretdown" style={styles.icon} />
         </>
       </CardSocial>
       <CardSocial>
         <>
           <Text style={styles.title}>• ARSÊNICO:</Text>
-          <AntDesign name="caretdown" style={styles.icon} />
         </>
       </CardSocial>
       
       <Text style={styles.titlebold}>Tamanho do Lote: </Text>
-      <Text style={styles.title}>• ACRE/HECTARES </Text>
+      <Text style={styles.title}>• ACRE/HECTARES: </Text>
       <Text style={styles.title}>Latitude: </Text>
       <Text style={styles.title}>Longitude: </Text>
 

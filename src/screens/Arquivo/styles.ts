@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     },
     textPreviewVisible: {
         color: colors.white,
-        fontsize: 20,
+        fontSize: 20,
     },
     buttonStartOver: {
         width: 130,
