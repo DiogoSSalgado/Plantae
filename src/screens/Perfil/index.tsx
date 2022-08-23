@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ImageBackground } from "react-native";
 import CardSocial from "../../components/CardSocial";
 import { AntDesign } from '@expo/vector-icons';
 import styles from "./styles";
@@ -10,6 +10,10 @@ export default function Perfil() {
   const { user } = useAuth();
   return (
     <View style={styles.container}>
+      <ImageBackground
+        source={require("../../assets/bgperfil.png")}
+        style={styles.container}
+      >
       <Image source={{ uri: user?.profile_photo_url }} style={styles.img}/>
       <Text style={styles.title}>Nome: {user?.name}</Text>
       <Text style={styles.title}>Email: {user?.email}</Text>
@@ -56,6 +60,7 @@ export default function Perfil() {
         type="primary"
         onPress={() => console.log("Salvar")}
       />
+      </ImageBackground>
       </View>
   );
 }

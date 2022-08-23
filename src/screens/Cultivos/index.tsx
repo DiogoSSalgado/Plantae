@@ -7,53 +7,56 @@ import {
 } from "react-native";
 import styles from "./styles";
 import Button from "../../components/AltButton";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function Cultivo() {
   return (
-    <View style={styles.container}>
+      
+      <ScrollView style ={styles.container}>
+        <Image source={require("../../assets/image8.png")} style={styles.imagem}/>
         <Button
           title="1º Soja"
           type="primary"
           onPress={() => console.log("Soja")}
         />
         <Button
-          title="6º Sargo"
+          title="2º Sorgo"
           type="primary"
-          onPress={() => console.log("Sargo")}
+          onPress={() => console.log("Sorgo")}
         />
         <Button
-          title="2º Café"
+          title="3º Café"
           type="primary"
           onPress={() => console.log("Café")}
         />
         <Button
-          title="7º Laranja"
+          title="4º Laranja"
           type="primary"
           onPress={() => console.log("Laranja")}
         />
         <Button
-          title="3º Milho"
+          title="5º Milho"
           type="primary"
           onPress={() => console.log("Milho")}
         />
         <Button
-          title="8º Alho"
+          title="6º Alho"
           type="primary"
           onPress={() => console.log("Alho")}
         />
         <Button
-          title="4º Feijão"
+          title="7º Feijão"
           type="primary"
           onPress={() => console.log("Feijão")}
         />
         <Button
-          title="9º Tomate"
+          title="8º Tomate"
           type="primary"
           onPress={() => console.log("Tomate")}
         />
         <Button
-          title="5º Braquiaria"
+          title="9º Braquiaria"
           type="primary"
           onPress={() => console.log("Braquiaria")}
         />
@@ -62,6 +65,6 @@ export default function Cultivo() {
           type="primary"
           onPress={() => console.log("CanaDeacucar")}
         />
-    </View>
+      </ScrollView>
   );
 }

@@ -6,10 +6,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#DAEBFB",
     borderRadius: 30,
     justifyContent: 'center',
-    margin: 10, 
-    marginLeft: 20, 
-    width: '40%',
+    marginRight: "30%",
+    marginLeft: "14%",
+    margin: 5,
     height: '10%'
+  },
+
+  buttonThird: {
+    backgroundColor: "#EFAD1D",
+    borderRadius: 30,
+    justifyContent: 'center',
+    margin: 5,
+    marginTop: "4%",    
   },
 
   text: {

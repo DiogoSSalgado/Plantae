@@ -13,6 +13,7 @@ export default function TabNavigation() {
         headerShown: true,
         headerStyle: { backgroundColor: "#B2DCF2"},
         tabBarActiveBackgroundColor: colors.primary,
+        headerTitleAlign: 'center',
         tabBarActiveTintColor: colors.white,
         tabBarInactiveBackgroundColor: colors.secondary,
         tabBarInactiveTintColor: colors.white,
@@ -37,7 +38,7 @@ export default function TabNavigation() {
         }}
       />
       <Tab.Screen
-        name="Cultivos"
+        name="Opções para cultivo"
         component={CultivosScreen}
         options={{
           tabBarIcon: () => (
@@ -45,7 +46,7 @@ export default function TabNavigation() {
           ),
         }}
       />
-      <Tab.Screen
+{/*       <Tab.Screen
         name="QrCode"
         component={QrCodeScreen}
         options={{
@@ -53,9 +54,9 @@ export default function TabNavigation() {
             <MaterialCommunityIcons name="qrcode-scan" size={24} color={colors.white} />
           ),
         }}
-      />
+      /> */}
 
-      <Tab.Screen
+{/*       <Tab.Screen
         name="Camera"
         component={CameraScreen}
         options={{
@@ -63,9 +64,9 @@ export default function TabNavigation() {
             <MaterialCommunityIcons name="camera" size={24} color={colors.white} />
           ),
         }}
-      />
+      /> */}
 
-      <Tab.Screen
+{/*       <Tab.Screen
         name="Arquivos"
         component={ArquivoScreen}
         options={{
@@ -73,14 +74,14 @@ export default function TabNavigation() {
             <MaterialCommunityIcons name="file-account" size={24} color={colors.white} />
           ),
         }}
-      />
+      /> */}
 
     <Tab.Screen
-        name="Calc"
+        name="Calculadora"
         component={CalculadoraScreen}
         options={{
           tabBarIcon: () => (
-            <MaterialCommunityIcons name="file-account" size={24} color={colors.white} />
+            <Ionicons name="calculator-outline" size={24} color="white" />
           ),
         }}
       />
