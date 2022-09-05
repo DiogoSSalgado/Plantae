@@ -5,25 +5,34 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
     backgroundColor: colors.white
-
   },
+
   title: {
+    marginTop:100,
     fontSize: 30,
-    letterSpacing: 4,
     fontWeight: "bold",
     textAlign: "center",
-    color: colors.secondary,
-    marginBottom: 20,
+    color: colors.black,
   },
+  text2:{
+    flexDirection:'row',
+    justifyContent:'center',
+    paddingTop:10,
+    paddingBottom: 20
+  },
+
+  signupText:{
+    fontWeight: 'bold',
+  },
+  
   formRow: {
     margin: 10,
     flexDirection: "row",
     alignItems: "center",
-    borderWidth: 1.5,
-    borderColor: colors.secondary,
-    borderRadius: 20,
+    borderWidth: 0.5,
+    borderColor: colors.black,
+    borderRadius: 5,
   },
 
   input: {
@@ -32,20 +41,24 @@ const styles = StyleSheet.create({
     width: "80%",
     color: colors.black,
   },
+
+  lineStyle:{
+    flexDirection:'row',
+    marginTop:30,
+    marginLeft:15,
+    marginRight:15,
+    alignItems:'center'
+  },
+  imageStyle:{
+    width:80,
+    height:80,
+    marginLeft:20,
+  },
   icon: {
     fontSize: 24,
-    color: colors.secondary,
+    color: colors.black,
     padding: 10
   },
-  imagem:{
-    alignItems: 'center',
-    width: 250,
-    height: 150
-  },
-  viewimage:{
-    alignItems: 'center',
-    margin: 10
-  }
 })
 
 export default styles;

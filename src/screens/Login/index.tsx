@@ -4,7 +4,7 @@ import {
   Text,
   TextInput,
   KeyboardAvoidingView,
-  Image,
+  TouchableOpacity,
   Alert
 } from "react-native";
 import { MaterialIcons, Entypo } from "@expo/vector-icons";
@@ -58,16 +58,20 @@ export default function Login({ navigation }: LoginTypes) {
   return (
     <View style={styles.container}>
         <KeyboardAvoidingView>
-          <View style={styles.viewimage}>
-            <Image source={require("../../assets/favicon.png")} style={styles.imagem}/>
+          <Text style={styles.title}>Login</Text>
+          <View style={styles.text2}>
+            <Text>Não tem uma conta? </Text>
+            <TouchableOpacity 
+              onPress={handleCadastrar} >
+              <Text style={styles.signupText}>Cadastre-se</Text>
+            </TouchableOpacity>
           </View>
-          <Text style={styles.title}>LOGIN</Text>
           <View style={styles.formRow}>
             <MaterialIcons name="email" style={styles.icon} />
             <TextInput
               placeholderTextColor='#6b6b6b'
               style={styles.input}
-              placeholder="E-mail"
+              placeholder="Email"
               keyboardType="email-address"
               autoCapitalize="none"
               onChangeText={(i) => handleChange({ email: i })}
@@ -85,13 +89,17 @@ export default function Login({ navigation }: LoginTypes) {
             />
           </View>
           <Button title="Login" type="secondary" onPress={handleSignIn} />
-          <Button
-            title="Cadastre-se"
-            type="secondary"
-            onPress={handleCadastrar}
-          />
+          <View style={styles.lineStyle}>
+            <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+            <View>
+              <Text style={{width: 50, textAlign: 'center'}}>Ou</Text>
+            </View>
+            <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+          </View>
+          
+
         </KeyboardAvoidingView>
-        <StatusBar style="dark" />
+        <StatusBar style="dark"/>
     </View>
   );
 }

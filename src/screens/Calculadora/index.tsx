@@ -6,7 +6,7 @@ import {
   TextInput,
   ImageBackground,
 } from "react-native";
-import Button from "../../components/AltButton";
+
 import styles from "./styles";
 
 export default function Calculadora() {
@@ -24,11 +24,7 @@ export default function Calculadora() {
           <Text style={styles.texto}> Selecione nutriente </Text>
           <Text style={styles.texto}> Selecione nutriente </Text>
         </View>
-        <Button
-          title="Calcular"
-          type="third"
-          onPress={() => console.log("Calcular")}
-        />
+
 
       </ImageBackground>
     </View>

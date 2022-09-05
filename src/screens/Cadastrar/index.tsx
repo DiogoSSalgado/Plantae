@@ -3,12 +3,12 @@ import {
   View,
   Text,
   KeyboardAvoidingView,
+  SafeAreaView,
   TextInput,
-  Image,
+  TouchableOpacity,
   Alert
 } from "react-native";
-
-import { MaterialIcons, Entypo, Ionicons } from "@expo/vector-icons";
+import { MaterialIcons, Entypo, Ionicons} from "@expo/vector-icons";
 import { StatusBar } from 'expo-status-bar';
 import Button from "../../components/Button";
 import { LoadingComp } from "../../components";
@@ -67,44 +67,57 @@ export default function Cadastrar({ navigation }: LoginTypes) {
       ) : (
         <View style={styles.container}>
             <KeyboardAvoidingView>
-              <View style={styles.viewimage}>
-                <Image source={require("../../assets/favicon.png")} style={styles.imagem}/>
-              </View>
-              <Text style={styles.title}>CADASTRAR</Text>
-              <View style={styles.formRow}>
-                <Ionicons name="person" style={styles.icon} />
-                <TextInput 
-                style={styles.input} 
-                placeholder="Nome" 
-                placeholderTextColor='#6b6b6b'
-                onChangeText={(i) => handleChange({ name: i })}/>
-              </View>
-              <View style={styles.formRow}>
-                <MaterialIcons name="email" style={styles.icon} />
-                <TextInput
+              <SafeAreaView>
+                <Text style={styles.title}>Cadastrar</Text>
+                <View style={styles.text2}>
+                  <Text>Já tem uma conta? </Text>
+                  <TouchableOpacity 
+                    onPress={handleLogin} >
+                    <Text style={styles.signupText}>Login</Text>
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.formRow}>
+                  <Ionicons name="person" style={styles.icon} />
+                  <TextInput 
+                  style={styles.input} 
+                  placeholder="Nome" 
                   placeholderTextColor='#6b6b6b'
-                  style={styles.input}
-                  placeholder="E-mail"
-                  keyboardType="email-address"
-                  autoCapitalize="none"
-                  onChangeText={(i) => handleChange({ email: i })}
-                />
-              </View>
-              <View style={styles.formRow}>
-                <Entypo name="key" style={styles.icon} />
-                <TextInput
-                  placeholderTextColor='#6b6b6b'
-                  style={styles.input}
-                  placeholder="Senha"
-                  secureTextEntry={true}
-                  autoCapitalize="none"
-                  onChangeText={(i) => handleChange({ password: i })}
-                />
-              </View>
-              <Button title="Salvar" type="secondary" onPress={handleRegister}/>
-              <Button title="Voltar" type="secondary" onPress={handleLogin} />
+                  onChangeText={(i) => handleChange({ name: i })}/>
+                </View>
+                <View style={styles.formRow}>
+                  <MaterialIcons name="email" style={styles.icon} />
+                  <TextInput
+                    placeholderTextColor='#6b6b6b'
+                    style={styles.input}
+                    placeholder="E-mail"
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                    onChangeText={(i) => handleChange({ email: i })}
+                  />
+                </View>
+                <View style={styles.formRow}>
+                  <Entypo name="key" style={styles.icon} />
+                  <TextInput
+                    placeholderTextColor='#6b6b6b'
+                    style={styles.input}
+                    placeholder="Senha"
+                    secureTextEntry={true}
+                    autoCapitalize="none"
+                    onChangeText={(i) => handleChange({ password: i })}
+                  />
+                </View>
+                <Button title="Enviar" type="secondary" onPress={handleRegister}/>
+                <View style={styles.lineStyle}>
+                  <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+                  <View>
+                    <Text style={{width: 50, textAlign: 'center'}}>Ou</Text>
+                  </View>
+                  <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+                </View>
+                {/* <Button title="Voltar" type="secondary" onPress={handleLogin} /> */}
+                </SafeAreaView>
             </KeyboardAvoidingView>
-            <StatusBar style="dark" />
+            <StatusBar style="dark"/>
         </View>
       )}
     </>

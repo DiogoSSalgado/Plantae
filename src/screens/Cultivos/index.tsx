@@ -6,7 +6,7 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import styles from "./styles";
-import Button from "../../components/AltButton";
+
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { ScrollView } from "react-native-gesture-handler";
 
@@ -14,8 +14,8 @@ export default function Cultivo() {
   return (
       
       <ScrollView style ={styles.container}>
-        <Image source={require("../../assets/image8.png")} style={styles.imagem}/>
-        <Button
+{/*         <Image source={require("../../assets/image8.png")} style={styles.imagem}/> */}
+{/*         <Button
           title="1º Soja"
           type="primary"
           onPress={() => console.log("Soja")}
@@ -64,7 +64,7 @@ export default function Cultivo() {
           title="10º Cana"
           type="primary"
           onPress={() => console.log("CanaDeacucar")}
-        />
+        /> */}
       </ScrollView>
   );
 }

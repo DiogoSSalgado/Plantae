@@ -1,24 +1,33 @@
 import React from "react";
-import { View, Text, Image, ImageBackground } from "react-native";
-import CardSocial from "../../components/CardSocial";
-import { AntDesign } from '@expo/vector-icons';
+import { View, Text, Image } from "react-native";
+import { EditarPerfilTypes } from "../../types/Screen.types";
 import styles from "./styles";
-import Button from "../../components/Button";
+import ButtonTransparente from "../../components/ButtonOpacity";
 import { useAuth } from "../../hook/auth";
 
-export default function Perfil() {
+export default function Perfil({ navigation }: EditarPerfilTypes) {
   const { user } = useAuth();
+
+  function handleEditarPerfil() {
+    navigation.navigate("EditarPerfil");
+  }
+
+
+
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={require("../../assets/bgperfil.png")}
-        style={styles.container}
-      >
-      <Image source={{ uri: user?.profile_photo_url }} style={styles.img}/>
-      <Text style={styles.title}>Nome: {user?.name}</Text>
-      <Text style={styles.title}>Email: {user?.email}</Text>
-      
-      <Text style={styles.titlebold}>DADOS: </Text>
+      <View style={styles.row}>
+  {/*   <Image source={{ uri: user?.profile_photo_url }} style={styles.img}/> */}
+        <Image source={require("../../assets/userpfp.png")} style = {styles.img}/>
+        <View style={{flex: 1, flexDirection: 'column'}}>
+          <Text style={styles.titlebold}>{user?.name}</Text>
+          <Text style={styles.subtitle}>Apresente aos outros usuários</Text>
+
+          <ButtonTransparente title="Editar" type="primary" onPress={handleEditarPerfil}/>
+        </View>
+      </View>
+
+{/*       <Text style={styles.titlebold}>DADOS: </Text>
       <CardSocial>
         <>
           <Text style={styles.title}>• PH:</Text>
@@ -48,19 +57,14 @@ export default function Perfil() {
       <Text style={styles.titlebold}>Tamanho do Lote: </Text>
       <Text style={styles.title}>• ACRE/HECTARES: </Text>
       <Text style={styles.title}>Latitude: </Text>
-      <Text style={styles.title}>Longitude: </Text>
+      <Text style={styles.title}>Longitude: </Text> */}
 
-      <Button
-        title="Editar"
-        type="primary"
-        onPress={() => console.log("Editar")}
-      />
-      <Button
+
+{/*       <Button
         title="Salvar"
         type="primary"
         onPress={() => console.log("Salvar")}
-      />
-      </ImageBackground>
-      </View>
+      /> */}
+    </View>
   );
 }

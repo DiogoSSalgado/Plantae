@@ -1,8 +1,11 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { SairScreen, CultivosScreen, MapScreen, PerfilScreen, QrCodeScreen, CameraScreen, ArquivoScreen, CalculadoraScreen} from "../screens";
+import { SairScreen, CultivosScreen, MapScreen, PerfilScreen, QrCodeScreen, CameraScreen, ArquivoScreen, CalculadoraScreen, ScrollScreen, ChatScreen} from "../screens";
 import colors from "../styles/colors";
-import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { Ionicons, MaterialCommunityIcons, FontAwesome5, MaterialIcons } from "@expo/vector-icons";
+import ChatNavigation from "./chat.navigation";
+import EditarPerfilNavigation from "./perfil.navigation";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -11,24 +14,25 @@ export default function TabNavigation() {
     <Tab.Navigator
       screenOptions={{
         headerShown: true,
-        headerStyle: { backgroundColor: "#B2DCF2"},
-        tabBarActiveBackgroundColor: colors.primary,
-        headerTitleAlign: 'center',
-        tabBarActiveTintColor: colors.white,
-        tabBarInactiveBackgroundColor: colors.secondary,
-        tabBarInactiveTintColor: colors.white,
+        headerStyle: { backgroundColor: colors.white},
+        tabBarActiveBackgroundColor: colors.white,
+        tabBarActiveTintColor: colors.secondary,
+        tabBarInactiveBackgroundColor: colors.white,
+        tabBarInactiveTintColor: colors.gray,
       }}
     >
       <Tab.Screen
         name="Perfil"
-        component={PerfilScreen}
+        component={EditarPerfilNavigation}
         options={{
-          tabBarIcon: () => (
-            <Ionicons name="person" size={24} color={colors.white} />
+         headerTitle: 'Plantae',
+/*          headerTitleStyle: { fontsize: 10},  */
+          tabBarIcon: ({color}) => (
+            <FontAwesome5 name="user-circle" size={24} color={color}/>
           ),
         }}
       />
-      <Tab.Screen
+{/*       <Tab.Screen
         name="Mapa"
         component={MapScreen}
         options={{
@@ -36,13 +40,14 @@ export default function TabNavigation() {
             <Ionicons name="map" size={24} color={colors.white} />
           ),
         }}
-      />
+      /> */}
       <Tab.Screen
-        name="Opções para cultivo"
-        component={CultivosScreen}
+        name="Comunidade"
+        component={ChatNavigation}
         options={{
-          tabBarIcon: () => (
-            <MaterialCommunityIcons name="tree" size={24} color={colors.white} />
+          headerShown: false,
+          tabBarIcon: ({color}) => (
+            <FontAwesome5 name="users" size={24} color={color} />
           ),
         }}
       />
@@ -75,26 +80,28 @@ export default function TabNavigation() {
           ),
         }}
       /> */}
-
     <Tab.Screen
-        name="Calculadora"
-        component={CalculadoraScreen}
+        name="Cultivos"
+        component={CultivosScreen}
         options={{
-          tabBarIcon: () => (
-            <Ionicons name="calculator-outline" size={24} color="white" />
+          headerShown: false,
+          tabBarIcon: ({color}) => (
+            <MaterialIcons name="grass" size={24} color={color} />
           ),
         }}
-      />
+      /> 
+ 
 
-      <Tab.Screen
+{/*      <Tab.Screen
         name="Sair"
         component={SairScreen}
         options={{
-          tabBarIcon: () => (
-          <Ionicons name="exit" size={24} color={colors.white} />
+          headerShown: false,
+          tabBarIcon: ({color}) => (
+          <Ionicons name="exit" size={24} color={color} />
           ),
         }}
-      />
+      /> */}
 
     </Tab.Navigator>
   );

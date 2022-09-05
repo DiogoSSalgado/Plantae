@@ -1,11 +1,20 @@
-import "react-native-gesture-handler";
-import Navigation from "./src/navigations";
-import {AuthProvider} from "./src/hook/auth";
+import {ScrollScreen} from './src/screens'
+
+export default function App() {
+  return (
+    <ScrollScreen/>
+  );
+}
+
+
+
+
+
+/* import "react-native-gesture-handler";
+
 
 export default function App(){
   return(
-      <AuthProvider>
-          <Navigation/>
-      </AuthProvider>
+
   );
-}
+} */
