@@ -21,7 +21,7 @@ export default function Perfil({ navigation }: EditarPerfilTypes) {
         <Image source={require("../../assets/userpfp.png")} style = {styles.img}/>
         <View style={{flex: 1, flexDirection: 'column'}}>
           <Text style={styles.titlebold}>{user?.name}</Text>
-          <Text style={styles.subtitle}>Apresente aos outros usuários</Text>
+          <Text style={styles.subtitle}>Apresente-se aos outros usuários</Text>
 
           <ButtonTransparente title="Editar" type="primary" onPress={handleEditarPerfil}/>
         </View>
