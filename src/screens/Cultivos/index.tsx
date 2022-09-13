@@ -2,8 +2,6 @@ import React from "react";
 import {
   View,
   TextInput,
-  Image,
-  KeyboardAvoidingView,
 } from "react-native";
 import styles from "./styles";
 import CardCultivos from "../../components/CardCultivos";
@@ -20,26 +18,86 @@ export default function Cultivo() {
             <TextInput placeholder="Pesquisar cultivo" placeholderTextColor='#808080'/>
           </View>
         </View>
+
         <CardCultivos
             nome="Soja"
-            descricao="dspoijudma ld. ~sa!!!
-            "
+            descricao="A soja é uma oleaginosa, pertencente à família Fabaceae, que abrange também plantas como
+            o feijão, a lentilha e a ervilha. A cultura desse grão é uma das mais importantes para a
+            economia mundial, devido às suas várias possibilidades de aplicação. Na indústria
+            alimentícia, por exemplo, ela é usada como matéria-prima na produção de massas,
+            chocolates, óleos, margarinas e maioneses, além de diversos outros alimentos."
             onPress={() => {
-              console.log("Calculadora");
+              console.log("Soja");
           }}
-          onCress={() => {
-            console.log("Dicas");
-        }}
         />
-      <CardCultivos nome="Sargo" descricao="Teste"/>
-      <CardCultivos nome="Café" descricao="Teste"/>
-      <CardCultivos nome="Laranja" descricao="Teste"/>
-      <CardCultivos nome="Milho" descricao="Teste"/>
-      <CardCultivos nome="Alho" descricao="Texto"/>
-      <CardCultivos nome="Feijão" descricao="Texto"/>    
-      <CardCultivos nome="Tomate" descricao="Texto, teste."/>
-      <CardCultivos nome="Braquiaria" descricao="Texto"/>
-      <CardCultivos nome="Cana-de-açúcar" descricao="Texto"/>
+
+      <CardCultivos 
+        nome="Café" 
+        descricao="Além da sua importância no desenvolvimento econômico do Brasil, ele trouxe uma
+        contribuição política e social significativa. O café proporcionou a sustentação do
+        aparelho político-administrativo e forneceu recursos para a instalação do parque
+        industrial nacional"
+        onPress={() => {
+          console.log("Café")
+        }}
+      />
+
+      <CardCultivos 
+        nome="Laranja" 
+        descricao="A laranja é uma das frutas mais populares e consumidas da família Rutaceae (família dos
+          cítricos). Além disso, também podemos usar folhas e flores para extração de óleos essenciais que
+          são muito utilizados na medicina natural e perfumarias."
+        onPress={() => {
+          console.log("Laranja")
+        }}
+      />
+      <CardCultivos 
+        nome="Milho" 
+        descricao="O milho pertence à família Poaceae, ao gênero Zea e sua espécie única recebe o nome de
+        Zea mays. É um cereal de alto valor nutricional e por isso mesmo está sendo largamente
+        utilizado na composição de rações animais e outros alimentos humanos.
+        É um dos grãos mais assistidos de tecnologias de plantio e colheita, é cosmopolita e sua
+        produção em 2004 chegou 600 milhões de toneladas em todo o mundo."
+        onPress={() => {
+          console.log("Milho")
+        }}
+      />
+      <CardCultivos 
+        nome="Alho" 
+        descricao="O alho é considerado um tempero natural de grande utilidade na culinária. É usado no
+        preparo de diversos pratos e alimentos. Sempre foi utilizado no tratamento e prevenção de várias doenças. Hoje sabe-se de sua
+        grande importância no combate a problemas relacionados ao coração, câncer e infecções."
+        onPress={() => {
+          console.log("Alho")
+        }}
+      />
+      <CardCultivos 
+        nome="Feijão" 
+        descricao="Altamente nutritivo, o feijão se destaca por sua versatilidade na cozinha, sendo a base
+        para pratos tradicionais como a feijoada, dobradinha e tropeiro. A leguminosa é rica em proteínas, ferro, cálcio, vitaminas do complexo B, entre outros."
+        onPress={() =>{
+          console.log("Feijão")
+        }}
+        />    
+      <CardCultivos 
+        nome="Tomate" 
+        descricao="O tomate está entre as hortaliças mais consumidas no mundo. É uma fonte importante de
+        vitaminas A e C. Destaca-se entre as hortaliças como fonte de vitamina B1. Também
+        fornece pequenas quantidades de sais minerais, como manganês e potássio."
+        onPress={() =>{
+          console.log("Tomate")
+        }}
+      />
+{/*       <CardCultivos nome="Braquiaria" descricao="Texto"/> */}
+      <CardCultivos nome="Cana-de-açúcar" 
+        descricao="A cana-de-açúcar é um grupo de espécie de gramíneas, nativas das regiões tropicais da
+        Ásia. A planta tem entre dois e seis metros de altura, o que varia de acordo com a
+        quantidade de sol que ela recebe diariamente, e possui caules robustos, fibrosos e
+        articulados, ricos em sacarose."
+        onPress={() =>{
+          console.log("Cana")
+        }}
+      />
  
 {/*         <Image source={require("../../assets/image8.png")} style={styles.imagem}/> */}
 {/*         <Button

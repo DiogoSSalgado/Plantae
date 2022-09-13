@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { SairScreen, CultivosScreen, MapScreen, PerfilScreen, QrCodeScreen, CameraScreen, ArquivoScreen, CalculadoraScreen, ScrollScreen, ChatScreen} from "../screens";
+import { SairScreen, CultivosScreen, MapScreen, PerfilScreen, QrCodeScreen, CameraScreen, SojaScreen, CalculadoraScreen, ScrollScreen, ChatScreen} from "../screens";
 import colors from "../styles/colors";
 import { Ionicons, MaterialCommunityIcons, FontAwesome5, MaterialIcons } from "@expo/vector-icons";
 import ChatNavigation from "./chat.navigation";
@@ -41,7 +41,7 @@ export default function TabNavigation() {
           ),
         }}
       /> */}
-      <Tab.Screen
+{/*       <Tab.Screen
         name="Comunidade"
         component={ChatNavigation}
         options={{
@@ -50,7 +50,7 @@ export default function TabNavigation() {
             <FontAwesome5 name="users" size={24} color={color} />
           ),
         }}
-      />
+      /> */}
 {/*       <Tab.Screen
         name="QrCode"
         component={QrCodeScreen}
@@ -83,6 +83,17 @@ export default function TabNavigation() {
     <Tab.Screen
         name="Cultivos"
         component={CultivosScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({color}) => (
+            <MaterialIcons name="grass" size={24} color={color} />
+          ),
+        }}
+      /> 
+
+    <Tab.Screen
+        name="Soja TESTE"
+        component={SojaScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (

@@ -17,12 +17,21 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
 
-  row: {
+  column: {
     paddingTop: 0,
-    flexDirection:'row',
+    flexDirection:'column',
+    width: Dimensions.get("window").width
     
-    width: Dimensions.get("window").width,
+  },
+
+  input: {
     backgroundColor: colors.white,
+    paddingLeft: 5,
+    borderColor: colors.black2,
+    borderWidth: 0.5,
+    borderRadius: 8,
+    margin: 5, 
+    width: '20%'
   },
   subtitle: {
     fontSize: 13,

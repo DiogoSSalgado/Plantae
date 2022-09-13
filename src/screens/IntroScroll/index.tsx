@@ -115,8 +115,8 @@ const slides = [
   },
   {
     key: 's2',
-    title: 'Comunidade',
-    text: 'Receba dicas de outros usuários sobre como melhorar seu cultivo',
+    title: 'Titulo',
+    text: 'aaa',
     image: {
       uri:
         'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_mobile_recharge.png',

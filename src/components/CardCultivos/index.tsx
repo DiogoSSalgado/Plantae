@@ -16,9 +16,7 @@ export default function CardCultivos({nome, descricao, onPress, ...rest}: Cultiv
                     <Text style={styles.titlebold}>{nome}</Text>
                     <Text style={styles.subtitle}>{descricao}</Text>
                     <View style={styles.iconview}>
-                        <Ionicons style={styles.icon} name="calculator" size={14} color={colors.darkgray} onPress={onPress}{...rest}/>
-                        <Entypo style={styles.icon} name="line-graph" size={14} color={colors.darkgray} onPress={onPress}{...rest}/>
-                        <MaterialIcons style={styles.icon} name="grass" size={14} color={colors.darkgray} onPress={onPress}{...rest}/>
+                        <Ionicons style={styles.icon} name="calculator-outline" size={16} color={colors.darkgray} onPress={onPress}{...rest}/>
                     </View>
                 </View>
             </View>
