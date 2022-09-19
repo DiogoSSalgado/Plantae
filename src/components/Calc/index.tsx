@@ -3,7 +3,6 @@ import { TextInput, View, Text } from "react-native";
 import { Ionicons, MaterialIcons, Entypo } from '@expo/vector-icons'; 
 import { CultivosProps } from "../../interfaces/Cultivos.interface";
 import styles from "./styles";
-import colors from "../../styles/colors";
 
 export default function CardCultivos({descricao, onPress, ...rest}: CultivosProps){
     const my_variable = require('../../assets/userpfp.png');

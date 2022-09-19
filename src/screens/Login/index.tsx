@@ -89,15 +89,6 @@ export default function Login({ navigation }: LoginTypes) {
             />
           </View>
           <Button title="Login" type="secondary" onPress={handleSignIn} />
-          <View style={styles.lineStyle}>
-            <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-            <View>
-              <Text style={{width: 50, textAlign: 'center'}}>Ou</Text>
-            </View>
-            <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-          </View>
-          
-
         </KeyboardAvoidingView>
         <StatusBar style="dark"/>
     </View>

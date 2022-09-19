@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    marginTop:100,
+    marginTop:150,
     fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
@@ -42,13 +42,6 @@ const styles = StyleSheet.create({
     color: colors.black,
   },
 
-  lineStyle:{
-    flexDirection:'row',
-    marginTop:30,
-    marginLeft:15,
-    marginRight:15,
-    alignItems:'center'
-  },
   imageStyle:{
     width:80,
     height:80,

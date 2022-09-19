@@ -107,13 +107,6 @@ export default function Cadastrar({ navigation }: LoginTypes) {
                   />
                 </View>
                 <Button title="Enviar" type="secondary" onPress={handleRegister}/>
-                <View style={styles.lineStyle}>
-                  <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-                  <View>
-                    <Text style={{width: 50, textAlign: 'center'}}>Ou</Text>
-                  </View>
-                  <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
-                </View>
                 {/* <Button title="Voltar" type="secondary" onPress={handleLogin} /> */}
                 </SafeAreaView>
             </KeyboardAvoidingView>

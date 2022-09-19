@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   introImageStyle: {
-    width: 200,
-    height: 200,
+    width: 250,
+    height: 250,
   },
   introTextStyle: {
     fontSize: 18,
@@ -107,21 +107,21 @@ const slides = [
     key: 's1',
     text: 'Veja o que você precisa para obter sucesso no seu plantio',
     title: 'Dicas de Cultivo',
-    image: {
+     image: {
       uri:
-        'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_mobile_recharge.png',
-    },
+        'https://raw.githubusercontent.com/DiogoSSalgado/PlantaeAssets/main/assets/cultivos2scroll.png',
+    }, 
     backgroundColor: '#BF915D',
   },
   {
     key: 's2',
-    title: 'Titulo',
-    text: 'aaa',
-    image: {
+    title: 'Calculadora Fertilizante',
+    text: 'Veja qual o plantio mais apropriado para o seu solo',
+     image: {
       uri:
-        'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_mobile_recharge.png',
-    },
-    backgroundColor: '#febe29',
+        'https://raw.githubusercontent.com/DiogoSSalgado/PlantaeAssets/main/assets/cultivoscroll.png',
+    }, 
+    backgroundColor: '#BF915D',
   },
   {
     key: 's3',
@@ -129,7 +129,7 @@ const slides = [
     text: 'Exame climático da sua região para a escolha do plantio mais adequado e da época mais apropriada',
     image: {
       uri:
-        'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_mobile_recharge.png',
+        'https://raw.githubusercontent.com/DiogoSSalgado/PlantaeAssets/main/assets/climascroll.png',
     },
     backgroundColor: '#22bcb5',
   },
