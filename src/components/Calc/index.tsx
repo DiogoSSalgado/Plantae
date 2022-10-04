@@ -1,37 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextInput, View, Text } from "react-native";
-import { Ionicons, MaterialIcons, Entypo } from '@expo/vector-icons'; 
 import { CultivosProps } from "../../interfaces/Cultivos.interface";
 import styles from "./styles";
+import { cafe } from "../../calc/calculadora";
+import Button from "../Button";
 
-export default function CardCultivos({descricao, onPress, ...rest}: CultivosProps){
-    const my_variable = require('../../assets/userpfp.png');
+export default function Calc({...rest}: CultivosProps){
+
+    const [retorno, setRetorno] = useState()
+
+    function calc() {
+        setRetorno(cafe())
+    }
 
     return (
         <View style={styles.card}>
             <View style={styles.column}>
-            <Text>Calculadora</Text> 
-                <TextInput
-                    style={styles.input}
-                    placeholder="PH"
-                    keyboardType="numeric"
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="CTC"
-                    keyboardType="numeric"
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="Salinidade"
-                    keyboardType="numeric"
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="Mercúrio"
-                    keyboardType="numeric"
-                />
-
+                <Text>Café</Text> 
+                <Button onPress={calc} title="Calcular" type="secondary" />
+                <Text>{retorno}</Text>
             </View>
         </View>
     );

@@ -1,11 +1,9 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { CultivosScreen } from "../screens";
+import { CultivosScreen, CalcScreen } from "../screens";
 import EditarPerfilNavigation from "./perfil.navigation";
 import colors from "../styles/colors";
-import { Ionicons, MaterialCommunityIcons, FontAwesome5, MaterialIcons } from "@expo/vector-icons";
-
-
+import { FontAwesome5, MaterialIcons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +20,7 @@ export default function TabNavigation() {
       }}
     >
       <Tab.Screen
-        name="Perfil"
+        name="PerfilTab"
         component={EditarPerfilNavigation}
         options={{
          headerTitle: 'Plantae',
@@ -35,6 +33,17 @@ export default function TabNavigation() {
     <Tab.Screen
         name="Cultivos"
         component={CultivosScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({color}) => (
+            <MaterialIcons name="grass" size={24} color={color} />
+          ),
+        }}
+      />
+
+    <Tab.Screen
+        name="Calculadora"
+        component={CalcScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (
