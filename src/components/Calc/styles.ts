@@ -67,7 +67,12 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: 0,
-    },
+  },
+  rank: {
+    marginTop: 5,
+    textAlign: "center",
+    
+  }
 })
 
 export default styles;
