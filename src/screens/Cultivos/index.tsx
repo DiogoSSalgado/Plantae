@@ -7,6 +7,18 @@ import styles from "./styles";
 import CardCultivos from "../../components/CardCultivos";
 import { FontAwesome5 } from '@expo/vector-icons';
 import { ScrollView } from "react-native-gesture-handler";
+import { cafe, soja, milho, feijao, sorgo, tomate, capim, cana, alho, laranja } from "../../calc/calculadora"
+
+var cafeS = cafe()
+var sojaS = soja()
+var milhoS = milho()
+var feijaoS = feijao()
+var sorgoS = sorgo()
+var tomateS = tomate()
+var capimS = capim()
+var canaS = cana()
+var alhoS = alho()
+var laranjaS = laranja()
 
 export default function Cultivo() {
   return (
@@ -27,8 +39,10 @@ export default function Cultivo() {
             alimentícia, por exemplo, ela é usada como matéria-prima na produção de massas,
             chocolates, óleos, margarinas e maioneses, além de diversos outros alimentos."
             onPress={() => {
-              console.log("Soja");
-          }}
+              return (
+                <Text></Text>
+              )
+            }}
         />
 
       <CardCultivos 

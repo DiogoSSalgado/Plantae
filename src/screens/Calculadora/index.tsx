@@ -7,7 +7,7 @@ export default function Calculadora() {
   return (
       <View style={styles.container}>
           <View style={styles.borderbox}> 
-            <Text style={styles.textHeader}>Soja</Text> 
+            <Text style={styles.textHeader}>Ranking</Text> 
           </View>
     
           <CalcComp nome="Soja" />

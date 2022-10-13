@@ -11,4 +11,5 @@ export default {
     secondary: '#00533C',
     third: '#00b300',
     thirdLight: '#A4D9E5',
+    lightGreen: '#baf6d6'
   }

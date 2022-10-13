@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextInput, View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { CultivosProps } from "../../interfaces/Cultivos.interface";
 import styles from "./styles";
 import { cafe, ranking } from "../../calc/calculadora";
@@ -14,16 +14,18 @@ export default function Calc({...rest}: CultivosProps){
     }
 
     return (
-        <View style={styles.card}>
-            <View style={styles.column}>
-                <Text>Ranking</Text> 
+        <View style={styles.container}>
+            <View> 
                 <Button onPress={calc} title="Calcular" type="secondary" />
-                <Text>O ranking das culturas na sua terra é: </Text>
-                {retorno && retorno.map((i) => {
-                    return (
-                        <Text key={i} style={styles.rank}>{i}</Text>
-                    )
-                })}
+                <View>
+                    {retorno && retorno.map((i) => {
+                        return (
+                            <View style={styles.rankView}>
+                                <Text key={i} style={styles.rank}>{i}</Text>
+                            </View>
+                        )
+                    })}
+                </View>
             </View>
         </View>
     );
