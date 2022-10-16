@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -15,6 +15,7 @@ import { LoginTypes } from "../../types/Screen.types";
 import { useAuth } from "../../hook/auth";
 import { IAuthenticate, IUser } from "../../interfaces/User.interface";
 import { AxiosError } from "axios";
+import { LoadingComp } from "../../components";
 
 export default function Login({ navigation }: LoginTypes) {
   const { signIn } = useAuth();
@@ -52,45 +53,52 @@ export default function Login({ navigation }: LoginTypes) {
   }
 
   useEffect(() => {
-  setIsLoading(false);
+    setIsLoading(false);
   }, []);
 
   return (
-    <View style={styles.container}>
-        <KeyboardAvoidingView>
-          <Text style={styles.title}>Login</Text>
-          <View style={styles.text2}>
-            <Text>Não tem uma conta? </Text>
-            <TouchableOpacity 
-              onPress={handleCadastrar} >
-              <Text style={styles.signupText}>Cadastre-se</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.formRow}>
-            <MaterialIcons name="email" style={styles.icon} />
-            <TextInput
-              placeholderTextColor='#6b6b6b'
-              style={styles.input}
-              placeholder="Email"
-              keyboardType="email-address"
-              autoCapitalize="none"
-              onChangeText={(i) => handleChange({ email: i })}
-            />
-          </View>
-          <View style={styles.formRow}>
-            <Entypo name="key" style={styles.icon} />
-            <TextInput
-              placeholderTextColor='#6b6b6b'
-              style={styles.input}
-              placeholder="Senha"
-              secureTextEntry={true}
-              autoCapitalize="none"
-              onChangeText={(i) => handleChange({ password: i })}
-            />
-          </View>
-          <Button title="Login" type="secondary" onPress={handleSignIn} />
-        </KeyboardAvoidingView>
-        <StatusBar style="dark"/>
-    </View>
+
+    <>
+      {isLoading ? (
+        <LoadingComp />
+      ) : (
+        <View style={styles.container}>
+          <KeyboardAvoidingView>
+            <Text style={styles.title}>Login</Text>
+            <View style={styles.text2}>
+              <Text>Não tem uma conta? </Text>
+              <TouchableOpacity
+                onPress={handleCadastrar} >
+                <Text style={styles.signupText}>Cadastre-se</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.formRow}>
+              <MaterialIcons name="email" style={styles.icon} />
+              <TextInput
+                placeholderTextColor='#6b6b6b'
+                style={styles.input}
+                placeholder="Email"
+                keyboardType="email-address"
+                autoCapitalize="none"
+                onChangeText={(i) => handleChange({ email: i })}
+              />
+            </View>
+            <View style={styles.formRow}>
+              <Entypo name="key" style={styles.icon} />
+              <TextInput
+                placeholderTextColor='#6b6b6b'
+                style={styles.input}
+                placeholder="Senha"
+                secureTextEntry={true}
+                autoCapitalize="none"
+                onChangeText={(i) => handleChange({ password: i })}
+              />
+            </View>
+            <Button title="Login" type="secondary" onPress={handleSignIn} />
+          </KeyboardAvoidingView>
+          <StatusBar style="dark" />
+        </View>
+      )}
+    </>
   );
 }

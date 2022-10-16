@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 0,
     resizeMode: "cover",
-    marginBottom: "5%"
   },
 
   titlebold: {

@@ -42,7 +42,7 @@ export default function TabNavigation() {
       />
 
     <Tab.Screen
-        name="Calculadora"
+        name="Ranking"
         component={CalcScreen}
         options={{
           headerShown: false,

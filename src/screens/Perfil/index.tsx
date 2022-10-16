@@ -5,6 +5,7 @@ import styles from "./styles";
 import ButtonTransparente from "../../components/ButtonOpacity";
 import { useAuth } from "../../hook/auth";
 import { useMap, IMap } from "../../hook/map";
+import colors from "../../styles/colors";
 
 export default function Perfil({ navigation }: EditarPerfilTypes) {
   const { user } = useAuth();
@@ -33,8 +34,21 @@ export default function Perfil({ navigation }: EditarPerfilTypes) {
           <ButtonTransparente title="Sair" type="primary" onPress={handleSair}/>
         </View>
       </View>
-      <Text> Lat:  {coord?.long} </Text>
-      <Text> Long:  {coord?.lat}</Text>
+      <View style={{flex: 1, alignItems: "center"}}>
+        <Text> Lat:  {coord?.long} </Text>
+        <Text> Long:  {coord?.lat}</Text>
+        <Text style={{
+            fontSize: 40,
+            backgroundColor: colors.lightGreen,
+            textAlign: "center",
+            marginTop: 40,
+            width: "80%",
+            padding: 7,
+            borderRadius: 20
+          }}>
+            VAI TOMAR NO CU JUNIN
+        </Text>
+      </View>
     </View>
   );
 }

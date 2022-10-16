@@ -35,14 +35,32 @@ const styles = StyleSheet.create({
     padding: 10,
     color: colors.gray
   },
+
   imagem:{
     alignItems: 'center',
     height: 250
   },
+
   viewimage:{
     backgroundColor: colors.white,
   },
 
+  nutriFal: {
+    paddingVertical: 2,
+    width: 50,
+    borderRadius: 10,
+    textAlign: "center",
+  },
+
+  nutriFalText: {
+    backgroundColor: colors.lightGreen,
+  },
+
+  configNutri: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginHorizontal: 30,
+  },
 
 })
 

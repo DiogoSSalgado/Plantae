@@ -10,14 +10,11 @@ export default function CardCultivos({nome, descricao, onPress, ...rest}: Cultiv
 
     return (
         <View style={styles.card}>
-            <View style={styles.row}>
-            {/* <Image style={styles.img} source={my_variable}/> */}
-                <View style={{flex: 1, flexDirection: 'column'}}>
-                    <Text style={styles.titlebold}>{nome}</Text>
-                    <Text style={styles.subtitle}>{descricao}</Text>
-                    <View style={styles.iconview}>
-                        <Ionicons style={styles.icon} name="calculator-outline" size={16} color={colors.darkgray} onPress={onPress}{...rest}/>
-                    </View>
+            <View style={{flex: 1, flexDirection: 'column'}}>
+                <Text style={styles.titlebold}>{nome}</Text>
+                <Text style={styles.subtitle}>{descricao}</Text>
+                <View style={styles.iconview}>
+                    <Ionicons style={styles.icon} name="calculator-outline" size={16} color={colors.darkgray} onPress={onPress}{...rest}/>
                 </View>
             </View>
         </View>
