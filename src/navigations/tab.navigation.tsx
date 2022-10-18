@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { CultivosScreen, CalcScreen, MapScreen } from "../screens";
 import EditarPerfilNavigation from "./perfil.navigation";
 import colors from "../styles/colors";
-import { FontAwesome5, MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -47,7 +47,7 @@ export default function TabNavigation() {
         options={{
           headerShown: false,
           tabBarIcon: ({color}) => (
-            <FontAwesome5 name="calculator" size={24} color={color} />
+            <Ionicons name="podium" size={24} color={color} />
           ),
         }}
       /> 
