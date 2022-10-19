@@ -76,45 +76,59 @@ export default function Perfil({ navigation }: EditarPerfilTypes) {
               <View style={{ flex: 1, flexDirection: 'column' }}>
                 <Text style={styles.titlebold}>{user?.name}</Text>
                 <Text style={styles.subtitle}>Apresente-se aos outros usuários</Text>
-
                 <ButtonTransparente title="Sair" type="primary" onPress={handleSair} />
               </View>
             </View>
-            <View style={{ marginLeft: 20 }}>
-              <Text> Lat:  {coord?.long} </Text>
-              <Text> Long:  {coord?.lat}</Text>
-              <View style={{ flexDirection: "row" }}>
-                <Text>N: </Text>
-                <TextInput
-                  onChangeText={(i) => handleChange({ N: i })} />
-              </View>
-              <View style={{ flexDirection: "row" }}>
-                <Text>P: </Text>
-                <TextInput
-                  onChangeText={(i) => handleChange({ P: i })} />
-              </View>
-              <View style={{ flexDirection: "row" }}>
-                <Text>K: </Text>
-                <TextInput
-                  onChangeText={(i) => handleChange({ K: i })} />
-              </View>
-              <View style={{ flexDirection: "row" }}>
-                <Text>Ca: </Text>
-                <TextInput
-                  onChangeText={(i) => handleChange({ Ca: i })} />
-              </View>
-              <View style={{ flexDirection: "row" }}>
-                <Text>Mg: </Text>
-                <TextInput
-                  onChangeText={(i) => handleChange({ Mg: i })} />
-              </View>
-              <View style={{ flexDirection: "row" }}>
-                <Text>S: </Text>
-                <TextInput
-                  onChangeText={(i) => handleChange({ S: i })} />
-              </View>
-              <ButtonComp title="Submit" type="secondary" onPress={handleSubmit}></ButtonComp>
+            <View style={styles.container2}>
+              <Text style={styles.textlocal}>Latitude:  {coord?.long} </Text>
+              <Text style={styles.textlocal}>Longitude:  {coord?.lat}</Text> 
             </View>
+            <View style={styles.container2}>
+              <View style={styles.nutriente}>
+                <Text style ={styles.nutrientetext} >N: </Text>
+                <TextInput
+                  onChangeText={(i) => handleChange({ N: i })} 
+                  keyboardType="numeric"
+                />
+              </View>
+              <View style={styles.nutriente}>
+                <Text style={styles.nutrientetext}>P:</Text>
+                <TextInput style ={styles.nutrientetext} 
+                  onChangeText={(i) => handleChange({ P: i })} 
+                  keyboardType="numeric"
+                />
+              </View>
+              <View style={styles.nutriente}>
+                <Text style ={styles.nutrientetext} >K: </Text>
+                <TextInput style ={styles.nutrientetext} 
+                  onChangeText={(i) => handleChange({ P: i })} 
+                  keyboardType="numeric"
+                />
+              </View>
+              <View style={styles.nutriente}>
+                <Text style ={styles.nutrientetext} >Ca: </Text>
+                <TextInput style ={styles.nutrientetext} 
+                  onChangeText={(i) => handleChange({ P: i })} 
+                  keyboardType="numeric"
+                />
+              </View>
+              <View style={styles.nutriente}>
+                <Text style ={styles.nutrientetext} >Mg: </Text>
+                <TextInput style ={styles.nutrientetext} 
+                  onChangeText={(i) => handleChange({ P: i })} 
+                  keyboardType="numeric"
+                />
+              </View>
+              <View style={styles.nutriente}>
+                <Text style ={styles.nutrientetext} >S: </Text>
+                <TextInput style ={styles.nutrientetext} 
+                  onChangeText={(i) => handleChange({ P: i })} 
+                  keyboardType="numeric"
+                />
+              </View>
+
+            </View>
+            <ButtonComp title="Enviar" type="secondary" onPress={handleSubmit}></ButtonComp>
           </View>
         )}
     </>

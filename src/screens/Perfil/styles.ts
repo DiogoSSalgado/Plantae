@@ -7,6 +7,39 @@ const styles = StyleSheet.create({
     marginTop: 0,
     resizeMode: "cover",
   },
+
+  container2: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    marginTop: "2%",
+    paddingTop: "5%",
+    paddingBottom: "5%",
+  },
+
+  textlocal: {
+    fontSize: 14,
+    marginLeft: "2%",
+    paddingTop: "5%",
+    paddingBottom: "5%",
+  },
+  nutriente: {
+    flexDirection: 'row',
+    backgroundColor: '#e6e6e6',
+    paddingLeft: "1%",
+    borderRadius: 5,
+    marginLeft: "2.3%", 
+    marginBottom: "2%",
+    width: '14%',
+    paddingTop: "2%",
+    paddingBottom: "2%",
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  nutrientetext: {
+    fontSize: 14,
+  },
+
   titlebold: {
     fontWeight: "bold",
     fontSize: 20,

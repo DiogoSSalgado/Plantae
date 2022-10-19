@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { ScrollView, View, Text } from "react-native";
 import styles from "./styles";
+
 import { CalcComp } from "../../components"
 
 export default function Calculadora() {
@@ -9,8 +10,9 @@ export default function Calculadora() {
           <View style={styles.borderbox}> 
             <Text style={styles.textHeader}>Ranking</Text> 
           </View>
-    
-          <CalcComp nome="Soja" />
+          <ScrollView>
+            <CalcComp/>
+          </ScrollView>
 
       </View>
   );

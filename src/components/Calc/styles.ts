@@ -15,8 +15,7 @@ const styles = StyleSheet.create({
     borderRadius: 30
   },
   rankView: {
-    justifyContent: "center",
-    alignItems: "center"
+    
   }
 })
 

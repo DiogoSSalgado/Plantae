@@ -16,13 +16,13 @@ export default function Calc({...rest}: CultivosProps){
     return (
         <View style={styles.container}>
             <View> 
-                <Button onPress={calc} title="Calcular" type="secondary" />
+                <Button onPress={calc} title="---" type="secondary" />
                 <View>
                     {retorno && retorno.map((i) => {
                         return (
-                            <View style={styles.rankView}>
+                            <ScrollView style={styles.rankView}>
                                 <Text key={i} style={styles.rank}>{i}</Text>
-                            </View>
+                            </ScrollView>
                         )
                     })}
                 </View>

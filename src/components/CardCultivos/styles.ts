@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     marginTop: 0,
+    backgroundColor: "white",
     resizeMode: "cover",
   },
 
