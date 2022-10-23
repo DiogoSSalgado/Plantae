@@ -6,8 +6,6 @@ import styles from "./styles";
 import colors from "../../styles/colors";
 
 export default function CardCultivos({nome, descricao, onPress, ...rest}: CultivosProps){
-    const my_variable = require('../../assets/userpfp.png');
-
     return (
         <View style={styles.card}>
             <View style={{flex: 1, flexDirection: 'column'}}>

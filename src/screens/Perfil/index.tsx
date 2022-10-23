@@ -89,6 +89,7 @@ export default function Perfil({ navigation }: EditarPerfilTypes) {
                 <TextInput
                   onChangeText={(i) => handleChange({ N: i })} 
                   keyboardType="numeric"
+                  maxLength={3}
                 />
               </View>
               <View style={styles.nutriente}>
@@ -96,6 +97,7 @@ export default function Perfil({ navigation }: EditarPerfilTypes) {
                 <TextInput style ={styles.nutrientetext} 
                   onChangeText={(i) => handleChange({ P: i })} 
                   keyboardType="numeric"
+                  maxLength={3}
                 />
               </View>
               <View style={styles.nutriente}>
@@ -103,6 +105,7 @@ export default function Perfil({ navigation }: EditarPerfilTypes) {
                 <TextInput style ={styles.nutrientetext} 
                   onChangeText={(i) => handleChange({ P: i })} 
                   keyboardType="numeric"
+                  maxLength={3}
                 />
               </View>
               <View style={styles.nutriente}>
@@ -110,6 +113,7 @@ export default function Perfil({ navigation }: EditarPerfilTypes) {
                 <TextInput style ={styles.nutrientetext} 
                   onChangeText={(i) => handleChange({ P: i })} 
                   keyboardType="numeric"
+                  maxLength={3}
                 />
               </View>
               <View style={styles.nutriente}>
@@ -117,6 +121,7 @@ export default function Perfil({ navigation }: EditarPerfilTypes) {
                 <TextInput style ={styles.nutrientetext} 
                   onChangeText={(i) => handleChange({ P: i })} 
                   keyboardType="numeric"
+                  maxLength={3}
                 />
               </View>
               <View style={styles.nutriente}>
@@ -124,6 +129,7 @@ export default function Perfil({ navigation }: EditarPerfilTypes) {
                 <TextInput style ={styles.nutrientetext} 
                   onChangeText={(i) => handleChange({ P: i })} 
                   keyboardType="numeric"
+                  maxLength={3}
                 />
               </View>
 

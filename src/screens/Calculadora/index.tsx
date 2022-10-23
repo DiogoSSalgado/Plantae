@@ -7,9 +7,6 @@ import { CalcComp } from "../../components"
 export default function Calculadora() {
   return (
       <View style={styles.container}>
-          <View style={styles.borderbox}> 
-            <Text style={styles.textHeader}>Ranking</Text> 
-          </View>
           <ScrollView>
             <CalcComp/>
           </ScrollView>

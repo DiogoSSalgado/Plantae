@@ -45,7 +45,7 @@ export default function TabNavigation() {
         name="Ranking"
         component={CalcScreen}
         options={{
-          headerShown: false,
+          headerShown: true,
           tabBarIcon: ({color}) => (
             <Ionicons name="podium" size={24} color={color} />
           ),

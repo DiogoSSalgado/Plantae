@@ -16,7 +16,7 @@ export default function Calc({...rest}: CultivosProps){
     return (
         <View style={styles.container}>
             <View> 
-                <Button onPress={calc} title="---" type="secondary" />
+                <Button onPress={calc} title="Calcular" type="secondary" />
                 <View>
                     {retorno && retorno.map((i) => {
                         return (

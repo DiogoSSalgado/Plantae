@@ -16,12 +16,15 @@ const styles = StyleSheet.create({
     paddingBottom: "5%",
   },
 
+
+
   textlocal: {
     fontSize: 14,
     marginLeft: "2%",
     paddingTop: "5%",
     paddingBottom: "5%",
   },
+
   nutriente: {
     flexDirection: 'row',
     backgroundColor: '#e6e6e6',
